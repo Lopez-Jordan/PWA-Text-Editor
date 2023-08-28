@@ -4,9 +4,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');  // U DONT NEED THIS TECHNICALLY
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
-
+// TODO: Add and configure workbox plugins for a service worker and manifest file.  DONE
+// TODO: Add CSS loaders and babel to webpack. DONE
 module.exports = () => {
   return {
     mode: 'development',
