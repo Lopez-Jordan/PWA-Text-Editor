@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const WebpackPwaManifest = require('webpack-pwa-manifest');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 
 const { InjectManifest } = require('workbox-webpack-plugin');
@@ -26,22 +26,22 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
-      // new WebpackPWAManifest({  //////////////////////////////////////////////////////////////////////////////////////
-      //   name: 'TODOs',            //CHANGE ALL HERE
-      //   short_name: 'TODOs',
-      //   description: 'Keep track of important tasks!',
-      //   background_color: '#7eb4e2',
-      //   theme_color: '#7eb4e2',
-      //   start_url: './',
-      //   publicPath: './',
-      //   icons: [
-      //   {
-      //       src: path.resolve('assets/images/logo.png'),
-      //       sizes: [96, 128, 192, 256, 384, 512],
-      //       destination: path.join('assets', 'icons'),
-      //   },
-      //   ],
-      // }),     //////////////////////////////////////////////////////////////////////////////////////
+      new WebpackPwaManifest({  //////////////////////////////////////////////////////////////////////////////////////
+        name: 'JATE',            //CHANGE ALL HERE
+        short_name: 'JATE',
+        description: 'Text Editor',
+        background_color: '#7eb4e2',
+        theme_color: '#7eb4e2',
+        start_url: './',
+        publicPath: './',
+        icons: [
+        {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+        },
+        ],
+      }),     //////////////////////////////////////////////////////////////////////////////////////
     ],
 
     module: {
